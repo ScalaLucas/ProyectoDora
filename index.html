@@ -180,7 +180,7 @@
             </div>
             <div class="form__contact">
                 <h2>Hablemos de tu idea</h2>
-                <form action="assets/php/contact.php" method="POST">
+                <form name="formulario-contacto" netlify>
                     <div class="name__email">
                         <input type="text" placeholder="Nombre" name="nombre">
                         <input type="email" placeholder="Correo electrónico" name="correo">
@@ -193,6 +193,9 @@
                     <textarea name="mensaje" placeholder="Mensaje" name="mensaje"></textarea>
 
                     <input type="submit" class="btn__text" value="Enviar Mensaje">
+
+                    <input type="hidden" name="text" value="http://127.0.0.1:5501/">
+                    <input type="hidden" name="_captcha" value="false">
                 </form>
             </div>
 
@@ -247,7 +250,7 @@
                     </div>
                     <div class="box__contact-footer">
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:info@ambientacion.com.ar?Subject=¡Buenas, AM%20Ambientaciones! %20¡Me%20interesa%20el%20servicio!" target="_blank">info@amambientaciones.com.ar</a>
+                        <a href="mailto:info@amambientaciones.com.ar?Subject=¡Buenas, AM%20Ambientaciones! %20¡Me%20interesa%20el%20servicio!" target="_blank">info@amambientaciones.com.ar</a>
                     </div>
                     <div class="box__contact-footer">
                         <i class="fa-solid fa-location-arrow"></i>
