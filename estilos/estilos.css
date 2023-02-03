@@ -14,10 +14,10 @@ html {
 }
 
 :root {
-    --color_text-primary: #2282d1;
+    --color_text-primary: #a558ec;
     --color_text-secundary: #101E2C;
     --color_text-tertiary: #485663;
-    --main_color-primary: #2282d1;
+    --main_color-primary: #a558ec;
     --main_color-secundary: #EFF3F5;
     --background-color: #FAFBFE;
     --lowText_font_size: 16px;
@@ -181,7 +181,7 @@ nav ul li a.active:before {
 }
 
 .cover {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     margin-top: 100px;
     display: flex;
@@ -195,8 +195,10 @@ nav ul li a.active:before {
 }
 
 .text__cover h1 {
+    color: var(--color_text-primary);
     font-size: 50px;
-    color: var(--color_text-secundary);
+    font-weight: 300;
+    letter-spacing: 3px;
 }
 
 .text__cover p {
