@@ -61,19 +61,22 @@
         </div>
         <div class="form__contact">
             <h2>Hablemos de tu idea</h2>
-            <form name="formulario_contacto" netlify>
+            <form action="https://formsubmit.co/Suliving2006@yahoo.com.ar" method="POST" name="formulario_contacto" netlify>
                 <div class="name__email">
                     <input type="text" placeholder="Nombre" name="nombre">
                     <input type="email" placeholder="Correo electrónico" name="correo">
                 </div>
                 <div class="subject__telephone">
-                    <input type="text" placeholder="Tema" name="tema">
+                    <input type="text" placeholder="Fecha de Evento" name="tema">
                     <input type="text" placeholder="Teléfono" name="telefono">
                 </div>
 
                 <textarea name="mensaje" placeholder="Mensaje" name="mensaje"></textarea>
 
                 <input type="submit" class="btn__text" value="Enviar Mensaje">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <input type="hidden" name="_captcha" value="false">
             </form>
         </div>
 
