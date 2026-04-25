@@ -55,8 +55,138 @@
         </div>
     </header>
 
+<script>
+const items = document.querySelectorAll(".luxury__item");
 
-    <main class="section">
+window.addEventListener("scroll", () => {
+    items.forEach(item => {
+        const top = item.getBoundingClientRect().top;
+        if (top < window.innerHeight * 0.85) {
+            item.classList.add("visible");
+        }
+    });
+});
+</script>
+
+
+<section class="ambientaciones-luxury">
+
+    <div class="luxury__intro">
+        <h2>No diseñamos decoraciones</h2>
+        <p>Creamos experiencias que se recuerdan</p>
+    </div>
+
+    <div class="luxury__gallery">
+
+        <!-- ITEM 1 -->
+        <div class="luxury__item">
+            <img src="../assets/ambientacion1.jpg" alt="Casamiento">
+
+            <div class="luxury__info">
+                <span class="luxury__tag">Casamientos</span>
+                <h3>Elegancia que se siente</h3>
+
+                <p class="luxury__story">
+                    Diseñamos una ambientación cálida y sofisticada, donde cada detalle acompañó la emoción del momento.
+                </p>
+
+                <ul class="luxury__details">
+                    <li>Iluminación ambiental</li>
+                    <li>Diseño personalizado</li>
+                    <li>Montaje integral</li>
+                </ul>
+
+                <span class="luxury__testimonial">
+                    “Superó todo lo que imaginábamos”
+                </span>
+
+                <a href="#" class="luxury__link">Ver ambientación completa</a>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="luxury__item">
+            <img src="../assets/ambientacion2.jpg" alt="15 años">
+
+            <div class="luxury__info">
+                <span class="luxury__tag">15 años</span>
+                <h3>Diseños con personalidad</h3>
+
+                <p class="luxury__story">
+                    Creamos un espacio moderno y vibrante, reflejando la identidad de la protagonista.
+                </p>
+
+                <ul class="luxury__details">
+                    <li>Concepto visual único</li>
+                    <li>Decoración temática</li>
+                    <li>Ambientación completa</li>
+                </ul>
+
+                <a href="#" class="luxury__link">Ver ambientación completa</a>
+            </div>
+        </div>
+
+        <!-- ITEM 3 (VIDEO) -->
+        <div class="luxury__item">
+            <video autoplay muted loop playsinline>
+                <source src="../assets/VideoSuliving.mp4" type="video/mp4">
+            </video>
+
+            <div class="luxury__info">
+                <span class="luxury__tag">Eventos sociales</span>
+                <h3>Momentos para recordar</h3>
+
+                <p class="luxury__story">
+                    Cada elemento fue pensado para generar impacto visual y disfrute en cada instante.
+                </p>
+
+                <ul class="luxury__details">
+                    <li>Diseño escenográfico</li>
+                    <li>Iluminación dinámica</li>
+                    <li>Experiencia integral</li>
+                </ul>
+
+                <a href="#" class="luxury__link">Ver ambientación completa</a>
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="luxury__item">
+            <img src="../assets/ambientacion4.jpg" alt="Corporativo">
+
+            <div class="luxury__info">
+                <span class="luxury__tag">Corporativos</span>
+                <h3>Imagen que impacta</h3>
+
+                <p class="luxury__story">
+                    Diseñamos espacios que comunican profesionalismo y refuerzan la identidad de marca.
+                </p>
+
+                <ul class="luxury__details">
+                    <li>Branding visual</li>
+                    <li>Montaje estratégico</li>
+                    <li>Diseño corporativo</li>
+                </ul>
+
+                <span class="luxury__testimonial">
+                    “Elevó completamente la imagen del evento”
+                </span>
+
+                <a href="#" class="luxury__link">Ver ambientación completa</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="luxury__cta">
+        <a href="https://wa.me/5491154037186" target="_blank">Hablemos por WhatsApp</a>
+    </div>
+
+</section>
+
+
+    <!--<main class="section">
         <section class="section_nosotros">
             <div class="section__link">
                     <img src="../assets/ambientacion2.jpg">
@@ -119,7 +249,7 @@
         <div class="btnn">
             <a href="../index.html" class="btn__text-about btn__textt">Volver a Inicio</a>
         </div>
-      </div>
+      </div>-->
 
 
 

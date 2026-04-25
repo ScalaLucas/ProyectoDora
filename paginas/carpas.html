@@ -56,7 +56,7 @@
     </header>
 
 
-    <div class="ful-img" id="fulImgBox">
+    <!--<div class="ful-img" id="fulImgBox">
         <img src="imgs/1.jpg" id="fulImg" alt="">
         <span onclick="closeImg()">X</span>
     </div>
@@ -107,7 +107,115 @@
         <div class="btnn">
             <a href="../index.html" class="btn__text-about btn__textt">Volver a Inicio</a>
         </div>
-      </div>
+      </div>-->
+
+   <section class="carpas-pro">
+
+    <div class="carpas-pro__header">
+        <h2>Transformamos cualquier espacio</h2>
+        <p>Antes y después de una ambientación con carpa</p>
+    </div>
+
+    <!-- ANTES / DESPUÉS -->
+    <div class="carpas-pro__compare">
+        <div class="compare__item">
+            <img src="../assets/us17.jpeg" alt="">
+            <span>Antes</span>
+        </div>
+
+        <div class="compare__item">
+            <img src="../assets/us3.jpeg" alt="">
+            <span>Después</span>
+        </div>
+    </div>
+
+    <!-- SELECTOR -->
+    <div class="carpas-pro__selector">
+
+        <h3>¿Cuántos invitados tendrá tu evento?</h3>
+
+        <div class="selector__buttons">
+            <button data-capacidad="100">Hasta 100</button>
+            <button data-capacidad="200">100 - 200</button>
+            <button data-capacidad="300">200 - 300</button>
+        </div>
+
+        <!-- RESULTADO -->
+        <div class="selector__resultado" id="resultado">
+            <p>Seleccioná una opción para ver la recomendación</p>
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="carpas-pro__cta">
+        <a href="https://wa.me/5491154037186" target="_blank">Cotizar carpa</a>
+    </div>
+
+</section>
+
+<script>
+const botones = document.querySelectorAll(".selector__buttons button");
+const resultado = document.getElementById("resultado");
+
+botones.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        const capacidad = btn.dataset.capacidad;
+
+        let texto = "";
+
+        if (capacidad == "100") {
+            texto = "Recomendamos una carpa compacta, ideal para eventos íntimos.";
+        } 
+        else if (capacidad == "200") {
+            texto = "Recomendamos una carpa estructural con espacio para ambientación completa.";
+        } 
+        else if (capacidad == "300") {
+            texto = "Recomendamos una carpa de gran escala con zonas diferenciadas.";
+        }
+
+        resultado.innerHTML = `<p>${texto}</p>`;
+    });
+});
+</script>
+
+<section class="carpas-galeria">
+
+    <div class="carpas-galeria__header">
+        <h2>Algunas de nuestras carpas en acción</h2>
+        <p>Cada evento es único, y cada estructura también</p>
+    </div>
+
+    <div class="carpas-galeria__grid">
+
+        <div class="galeria__item">
+            <img src="../assets/carpas01.jpg" alt="Carpa evento">
+        </div>
+
+        <div class="galeria__item">
+            <img src="../assets/carpas02.jpg" alt="Carpa evento">
+        </div>
+
+        <div class="galeria__item">
+            <img src="../assets/carpas03.jpg" alt="Carpa evento">
+        </div>
+
+        <div class="galeria__item">
+            <img src="../assets/carpas06.jpg" alt="Carpa evento">
+        </div>
+
+        <div class="galeria__item">
+            <img src="../assets/carpas10.jpg" alt="Carpa evento">
+        </div>
+
+        <div class="galeria__item">
+            <img src="../assets/CarpasI.jpeg" alt="Carpa evento">
+        </div>
+
+    </div>
+
+</section>
     
     
 

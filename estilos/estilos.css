@@ -933,7 +933,428 @@ footer .socialMedia img {
 }
 
 
-/*Pagina Quienes Somos*/
+
+
+/* ===== BASE ===== */
+
+.ambientaciones-luxury {
+    padding: 100px 20px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+/* INTRO */
+.luxury__intro {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.luxury__intro h2 {
+    font-size: 2.5rem;
+}
+
+.luxury__intro p {
+    color: #000000;
+}
+
+/* GRID */
+.luxury__gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* ITEM */
+.luxury__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+/* IMG + VIDEO */
+.luxury__item img,
+.luxury__item video {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+/* INFO */
+.luxury__info {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+/* TEXTOS */
+.luxury__tag {
+    color: #d4af37;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.luxury__info h3 {
+    margin: 10px 0;
+}
+
+.luxury__story {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* LISTA */
+.luxury__details {
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+.luxury__details li {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* TESTIMONIO */
+.luxury__testimonial {
+    display: block;
+    font-size: 0.8rem;
+    color: #d4af37;
+    margin: 10px 0;
+}
+
+/* LINK */
+.luxury__link {
+    font-size: 0.85rem;
+    text-decoration: underline;
+    color: white;
+}
+
+/* HOVER ZOOM */
+.luxury__item:hover img,
+.luxury__item:hover video {
+    transform: scale(1.05);
+}
+
+/* FOCUS EFFECT */
+.luxury__gallery:hover .luxury__item {
+    opacity: 0.4;
+}
+
+.luxury__gallery .luxury__item:hover {
+    opacity: 1;
+}
+
+/* CTA */
+.luxury__cta {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.luxury__cta a {
+    border: 1px solid  #a558ec;
+    color:  #a558ec;
+    padding: 12px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.luxury__cta a:hover {
+    background: #a558ec;
+    color: rgb(254, 254, 254);
+}
+
+@media (max-width: 992px) {
+    .luxury__gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .luxury__item img,
+    .luxury__item video {
+        height: 300px;
+    }
+
+    .luxury__intro h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/*MOBILIARIOS NUEVO*/
+
+/* ===== MOBILIARIO ===== */
+
+.mobiliario {
+    padding: 90px 20px;
+    background: #f8f9fc;
+}
+
+/* HEADER */
+.mobiliario__header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mobiliario__header h2 {
+    font-size: 2.3rem;
+}
+
+/* FILTROS */
+.mobiliario__filters {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mobiliario__filters button {
+    border: none;
+    background: transparent;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mobiliario__filters button.active,
+.mobiliario__filters button:hover {
+    background-color: #a558ec;
+    color: #fff;
+}
+
+/* GRID */
+.mobiliario__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ITEM */
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* IMG */
+.item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* OVERLAY */
+.item__info {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.item:hover .item__info {
+    opacity: 1;
+}
+
+/* CTA */
+.mobiliario__cta {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.mobiliario__cta a {
+    border: 1px solid #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color: #a558ec;
+    color: #fdfdfd;
+}
+
+@media (max-width: 992px) {
+    .mobiliario__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .mobiliario__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*CARPAS NUEVO*/
+
+/* ===== CARPAS PRO ===== */
+
+.carpas-pro {
+    padding: 100px 20px;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+/* HEADER */
+.carpas-pro__header h2 {
+    font-size: 2.5rem;
+}
+
+.carpas-pro__header p {
+    color: #aaa;
+}
+
+/* COMPARE */
+.carpas-pro__compare {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.compare__item {
+    position: relative;
+}
+
+.compare__item img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.compare__item span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: black;
+    padding: 5px 10px;
+}
+
+/* SELECTOR */
+.selector__buttons button {
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #a558ec;;
+    background: transparent;
+    color: #a558ec;;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.selector__buttons button:hover {
+    background: #a558ec;;
+    color: rgb(255, 255, 255);
+}
+
+/* RESULTADO */
+.selector__resultado {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+/* CTA */
+.carpas-pro__cta a {
+    display: inline-block;
+    margin-top: 40px;
+    border: 1px solid #a558ec;;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: #a558ec;;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .carpas-pro__compare {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .compare__item img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* ===== GALERÍA CARPAS ===== */
+
+.carpas-galeria {
+    padding: 100px 20px;
+    background: #fefefe;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+/* HEADER */
+.carpas-galeria__header {
+    margin-bottom: 50px;
+}
+
+.carpas-galeria__header h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.carpas-galeria__header p {
+    color: #000000;
+}
+
+/* GRID */
+.carpas-galeria__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ITEM */
+.galeria__item {
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+/* IMG */
+.galeria__item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* HOVER */
+.galeria__item:hover img {
+    transform: scale(1.08);
+}
+
+@media (max-width: 992px) {
+    .carpas-galeria__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .carpas-galeria__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria__item img {
+        height: 220px;
+    }
+}
+/*Pagina Ambientaciones*/
 
 .section{
     margin-top: 5%;

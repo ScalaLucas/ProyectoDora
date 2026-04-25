@@ -58,7 +58,7 @@
 
 <!--MOBILIARIOS-->
 
-<div class="ful-img" id="fulImgBox">
+<!--<div class="ful-img" id="fulImgBox">
     <img src="imgs/1.jpg" id="fulImg" alt="">
     <span onclick="closeImg()">X</span>
 </div>
@@ -109,7 +109,165 @@
 
   <div class="btnn">
     <a href="../index.html" class="btn__text-about btn__textt">Volver a Inicio</a>
+</div>-->
+
+<section class="mobiliario">
+
+    <div class="mobiliario__header">
+        <h2>Mobiliario que define el estilo de tu evento</h2>
+        <p>Cada pieza está pensada para complementar la ambientación y elevar la experiencia</p>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="mobiliario__filters">
+        <button class="active" data-filter="all">Todo</button>
+        <button data-filter="mesas">Mesas</button>
+        <button data-filter="sillas">Sillas</button>
+        <button data-filter="livings">Livings</button>
+        <button data-filter="decoracion">Decoración</button>
+    </div>
+
+    <!-- GRID -->
+<div class="mobiliario__grid">
+
+<div class="item" data-category="mesas">
+    <img src="../assets/imagen2M.jpg" alt="">
+    <div class="item__info">
+        <h3>Mesa vintage</h3>
+        <p>Ideal para eventos elegantes</p>
+        <a href="#">Consultar</a>
+    </div>
 </div>
+
+<div class="item" data-category="mesas">
+    <img src="../assets/imagen4M.jpg" alt="">
+    <div class="item__info">
+        <h3>Mesa rústica</h3>
+        <p>Estilo natural y cálido</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="mesas">
+    <img src="../assets/imagen9M.jpg" alt="">
+    <div class="item__info">
+        <h3>Mesa moderna</h3>
+        <p>Diseño minimalista</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+       <div class="item" data-category="sillas">
+    <img src="../assets/imagen6M.jpg" alt="">
+    <div class="item__info">
+        <h3>Silla Tiffany</h3>
+        <p>Clásica y elegante</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="sillas">
+    <img src="../assets/carpas04.jpg" alt="">
+    <div class="item__info">
+        <h3>Silla Crossback</h3>
+        <p>Estilo rústico y natural</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="sillas">
+    <img src="../assets/imagen2M.jpg" alt="">
+    <div class="item__info">
+        <h3>Silla Napoleón</h3>
+        <p>Diseño sofisticado</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+        <div class="item" data-category="livings">
+    <img src="../assets/imagen1.jpeg" alt="">
+    <div class="item__info">
+        <h3>Living clásico</h3>
+        <p>Comodidad y elegancia</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="livings">
+    <img src="../assets/imagen4M.jpg" alt="">
+    <div class="item__info">
+        <h3>Living moderno</h3>
+        <p>Diseño minimalista</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="livings">
+    <img src="../assets/imagen9M.jpg" alt="">
+    <div class="item__info">
+        <h3>Living Capitane</h3>
+        <p>Ideal para eventos sociales</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="decoracion">
+    <img src="../assets/MueblesII.jpeg" alt="">
+    <div class="item__info">
+        <h3>Centros de mesa</h3>
+        <p>Detalles que destacan</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="decoracion">
+    <img src="../assets/jupah2.jpg" alt="">
+    <div class="item__info">
+        <h3>Arreglos florales</h3>
+        <p>Elegancia natural</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+<div class="item" data-category="decoracion">
+    <img src="../assets/MueblesVIII.jpeg" alt="">
+    <div class="item__info">
+        <h3>Iluminación decorativa</h3>
+        <p>Ambientes únicos</p>
+        <a href="#">Consultar</a>
+    </div>
+</div>
+
+</div>
+
+    <!-- CTA -->
+    <div class="mobiliario__cta">
+        <a href="https://wa.me/5491154037186" target="_blank">Hablemos</a>
+    </div>
+
+</section>
+
+<script>
+const buttons = document.querySelectorAll(".mobiliario__filters button");
+const items = document.querySelectorAll(".item");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+
+        items.forEach(item => {
+            if (filter === "all" || item.dataset.category === filter) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+});
+</script>
 
 
 
